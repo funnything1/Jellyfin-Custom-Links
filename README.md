@@ -23,7 +23,7 @@ Next we have to find "ButtonForgotPassword" for the html part
 
 3. ```grep -rl "ButtonForgotPassword" . 2>/dev/null```  For me this found 2 files the one i needed to edit was ```7860.6d6adc949fc3e4f6a82f.chunk.js``` it might be different for you. 
 
-4. Within that file we need to edit "ButtonForgotPassword":"Forgot Password" to become a clickable link Here is what worked for me:
+4. Within that file we need to edit "ButtonForgotPassword":"Forgot Password" to become a clickable link. Here is what worked for me:
 ```"ButtonForgotPassword":"<a href=\'CUSTOM URL HERE\' style=\'position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\'></a>Forgot Password"```
 
 # Result:
