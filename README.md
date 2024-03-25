@@ -39,11 +39,12 @@ Clicking forgot password takes you to our cutom link like to jfa-go
 
 It is a very similar process to editing the forgot password link.
 1. from within /jellyfin/jellyfin-web find the file containing ```{name:u.ZP.translate("Favorites")}```
+   
    ```grep -rl ""Favorites"" . 2>/dev/null``` the file i needed to edit was similar to ```home.4b3e34ee8d1232d66dec.chunk.js```
    
-2. Within that file find "{name:u.ZP.translate("Favorites")}" and right after that add ```,{name:u.ZP.translate("<a href=\'CUSTOM URL HERE\' rel=\'noopener noreferrer\' target=\'_blank\' style=\'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 165%; height: 340%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\' class=\'emby-tab-button\'></a>Requests")}```
+3. Within that file find "{name:u.ZP.translate("Favorites")}" and right after that add ```,{name:u.ZP.translate("<a href=\'CUSTOM URL HERE\' rel=\'noopener noreferrer\' target=\'_blank\' style=\'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 165%; height: 340%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\' class=\'emby-tab-button\'></a>Requests")}```
 
-3. (Optional) adding sidebar links
+4. (Optional) adding sidebar links
    
  Jellyfin has a guide on how to do this:
  [Jellyfin Web Configuration](https://jellyfin.org/docs/general/clients/web-config/)
