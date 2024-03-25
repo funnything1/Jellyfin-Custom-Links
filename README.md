@@ -1,6 +1,7 @@
 # Jellyfin-Custom-Links
 
 I found a way to edit the forgot password button link and a way to add a requests button as a menu button that opens a new tab for use with jellyseer + jfa-go
+There is another guide on how to do something similar but i found it did not achieve what i wanted. [jellyfin-mods](https://github.com/BobHasNoSoul/jellyfin-mods?tab=readme-ov-file#change-the-password-reset-process-for-use-with-jfa-go-email-password-reseting)
 
 I use docker jellyfin but the steps should be very similar to windows/linux installs.
 
