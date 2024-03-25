@@ -4,7 +4,7 @@ I found a way to edit the forgot password button link and a way to add a request
 
 I use docker jellyfin but the steps should be very similar to windows/linux installs.
 
-This is not an intended way to edit this. Any update to jellyfin may break something i am using jellyfin 10.8.13
+This is not an intended way to edit this. Any update to jellyfin may break something. I am using the latest jellyfin 10.8.13
 
 # Instructions for forgot password link in jellyfin
 
@@ -55,13 +55,18 @@ Clicking the request button opens a new tab with our own link such as jellyseer
 ![image](https://github.com/funnything1/Jellyfin-Custom-Links/assets/69848819/48debc98-8fc4-4be6-95c7-e2c91644303d)
 ![image](https://github.com/funnything1/Jellyfin-Custom-Links/assets/69848819/8cd11a01-307d-42cc-bfc5-e44c72f33ea9)
 
-# Notes 
+# Making changes persistant in docker
 Since i am using docker any changes i make wont be persistant so i will need to move each of my edited files to another location then link them in the docker.
-I accomplished moving the files outside of the docker environment by using scp
+I accomplished moving the files outside of the docker environment by using scp into another location then linking the new location to where they are inside of docker
 
 I am using truenas but it would be similar for any docker compose
 
 ![image](https://github.com/funnything1/Jellyfin-Custom-Links/assets/69848819/91a7726a-1833-49e6-976e-4a4eef0bf4c5)
+
+# Notes:
+These changes are only able to be used inside of jellyfin web and none of these changes will affect jellfin media player or any dedicated jellyfin app.
+
+They will however affect the iphone and andriod jellyfin apps which is nice.
 
 
 
