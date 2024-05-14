@@ -7,7 +7,7 @@ There is another guide on how to do something similar but i found it did not ach
 
 I use docker jellyfin but the steps should be very similar to windows/linux installs.
 
-This is not an intended way to edit this. Any update to jellyfin may break something. I am using the latest jellyfin 10.8.13
+This is not an intended way to edit this. Any update to jellyfin may break something. I am using the latest jellyfin 10.9.1 as of 5/14/2024
 
 # Instructions for forgot password link in jellyfin
 
@@ -24,7 +24,7 @@ To edit the forgot password functionality we first need to find the correct file
 
 Next we have to find "ButtonForgotPassword" for the html part
 
-3. ```grep -rl "ButtonForgotPassword" . 2>/dev/null```  For me this found 2 files the one i needed to edit was ```7860.6d6adc949fc3e4f6a82f.chunk.js``` it might be different for you. 
+3. ```grep -rl "ButtonForgotPassword" . 2>/dev/null```  For me this found 2 files the one i needed to edit was ```en-us-json.aed814678aaadfab3be8.chunk.js``` it might be different for you. 
 
 4. Within that file we need to edit "ButtonForgotPassword":"Forgot Password" to become a clickable link. Here is what worked for me:
 ```"ButtonForgotPassword":"<a href=\'CUSTOM URL HERE\' style=\'position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\'></a>Forgot Password"```
@@ -45,7 +45,7 @@ It is a very similar process to editing the forgot password link.
    
    ```grep -rl ""Favorites"" . 2>/dev/null``` the file i needed to edit was similar to ```home.4b3e34ee8d1232d66dec.chunk.js```
    
-3. Within that file find "{name:u.ZP.translate("Favorites")}" and right after that add ```,{name:u.ZP.translate("<a href=\'CUSTOM URL HERE\' rel=\'noopener noreferrer\' target=\'_blank\' style=\'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 165%; height: 340%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\' class=\'emby-tab-button\'></a>Requests")}```
+3. Within that file find something similar to this: "{name:u.XX.translate("Favorites")}" and right after that add ```,{name:u.ZP.translate("<a href=\'CUSTOM URL HERE\' rel=\'noopener noreferrer\' target=\'_blank\' style=\'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 165%; height: 340%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\' class=\'emby-tab-button\'></a>Requests")}```
 
 4. (Optional) adding sidebar links
    
