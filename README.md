@@ -17,7 +17,7 @@ To edit the forgot password functionality we first need to find the correct file
 
 1. From within the docker container cd into "/jellyfin/jellyfin-web" the and run this command
 
-```grep -rl "(".btnForgotPassword")" . 2>/dev/null```  This will output any files that contain the string "btnForgotPassword". The file I am looking for is something similar to ```session-login.xxxxxxxxxxxxxxxxxxxx.chunk.js```
+```grep -rl '(".btnForgotPassword")' . 2>/dev/null```  This will output any files that contain the string "btnForgotPassword". The file I am looking for is something similar to ```session-login.xxxxxxxxxxxxxxxxxxxx.chunk.js```
 
 
 2. Within that file find and delete this exactly: ```e.querySelector(".btnForgotPassword").addEventListener("click",(function(){m.ZP.navigate("forgotpassword.html")})),```    This stops the click action from redirecting to the builtin forgotpassword.html page.
