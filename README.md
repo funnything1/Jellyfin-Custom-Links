@@ -55,7 +55,7 @@ It is a very similar process to editing the forgot password link.
 
 
 # Result:
-Clicking the request button opens a new tab with our own link such as jellyseer
+We now have another button on the top bar and clicking the button opens a new tab with our own link such as for jellyseer.
 ![image](https://github.com/funnything1/Jellyfin-Custom-Links/assets/69848819/48debc98-8fc4-4be6-95c7-e2c91644303d)
 ![image](https://github.com/funnything1/Jellyfin-Custom-Links/assets/69848819/8cd11a01-307d-42cc-bfc5-e44c72f33ea9)
 
