@@ -7,7 +7,7 @@ There is another guide on how to do something similar but i found it did not ach
 
 I use docker jellyfin but the steps should be very similar to windows/linux installs.
 
-This is not an intended way to edit this. Any update to jellyfin may break something. I am using the latest jellyfin 10.9.1 as of 5/14/2024
+This is not an intended way to edit this. Any update to jellyfin may break something. I am using the latest jellyfin 10.9.2 as of 5/20/2024
 
 # Instructions for forgot password link in jellyfin
 
