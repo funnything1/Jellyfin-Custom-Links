@@ -24,7 +24,7 @@ To edit the forgot password functionality we first need to find the correct file
 
 Next we have to find "ButtonForgotPassword" for the html part
 
-3. ```grep -rl "ButtonForgotPassword" . 2>/dev/null```  For me this found 2 files the one i needed to edit was ```en-us-json.aed814678aaadfab3be8.chunk.js``` it might be different for you. 
+3. ```grep -rl '"ButtonForgotPassword":"Forgot Password"' . 2>/dev/null```  For me this found 2 files the one i needed to edit was ```en-us-json.aed814678aaadfab3be8.chunk.js``` it might be different for you. 
 
 4. Within that file we need to edit "ButtonForgotPassword":"Forgot Password" to become a clickable link. Here is what worked for me:
 ```"ButtonForgotPassword":"<a href=\'CUSTOM URL HERE\' style=\'position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\'></a>Forgot Password"```
