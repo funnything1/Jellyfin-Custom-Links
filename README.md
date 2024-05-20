@@ -45,7 +45,7 @@ It is a very similar process to editing the forgot password link.
    
    ```grep -rl '{name:*.**.translate("Favorites")}' . 2>/dev/null``` the file i needed to edit was similar to ```35463.67bda02193f3e09e156d.chunk.js``` but it will probably be different for you so you will have to do this for several files to find the correct one.
    
-3. Within that file find something similar to this: "{name:u.XX.translate("Favorites")}" and right after that add ```,{name:X.XX.translate("<a href=\'CUSTOM URL HERE\' rel=\'noopener noreferrer\' target=\'_blank\' style=\'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 165%; height: 340%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\' class=\'emby-tab-button\'></a>Requests")}``` Where X.XX is a few letters that you will find next to translate("Favorites") this will need to be the same letters that were there origionally. The first X will be different for each file. For example my file needed f.Ay for X.XX for it to work.
+3. Within that file find something similar to this: "{name:X.XX.translate("Favorites")}" and right after that add ```,{name:X.XX.translate("<a href=\'CUSTOM URL HERE\' rel=\'noopener noreferrer\' target=\'_blank\' style=\'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 165%; height: 340%; z-index: 1; cursor: pointer; text-decoration: none; color: inherit;\' class=\'emby-tab-button\'></a>Requests")}``` Where X.XX is a few letters that you will find next to translate("Favorites") this will need to be the same letters that were there origionally. The first X will be different for each file. For example my file needed f.Ay for X.XX for it to work.
 
 4. (Optional) adding sidebar links
    
